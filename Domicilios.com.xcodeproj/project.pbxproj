@@ -12,6 +12,8 @@
 		790A5C231DAA8FFB004B440E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790A5C211DAA8FFB004B440E /* Main.storyboard */; };
 		790A5C251DAA8FFB004B440E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790A5C241DAA8FFB004B440E /* Assets.xcassets */; };
 		790A5C281DAA8FFB004B440E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790A5C261DAA8FFB004B440E /* LaunchScreen.storyboard */; };
+		790A5C311DAA902E004B440E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790A5C301DAA902E004B440E /* MapKit.framework */; };
+		790A5C331DAA91D3004B440E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790A5C321DAA91D3004B440E /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		790A5C241DAA8FFB004B440E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		790A5C271DAA8FFB004B440E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		790A5C291DAA8FFB004B440E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		790A5C301DAA902E004B440E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		790A5C321DAA91D3004B440E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790A5C331DAA91D3004B440E /* CoreLocation.framework in Frameworks */,
+				790A5C311DAA902E004B440E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				790A5C1C1DAA8FFB004B440E /* Domicilios.com */,
 				790A5C1B1DAA8FFB004B440E /* Products */,
+				790A5C2F1DAA902E004B440E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +69,15 @@
 				790A5C291DAA8FFB004B440E /* Info.plist */,
 			);
 			path = Domicilios.com;
+			sourceTree = "<group>";
+		};
+		790A5C2F1DAA902E004B440E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				790A5C321DAA91D3004B440E /* CoreLocation.framework */,
+				790A5C301DAA902E004B440E /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +113,11 @@
 					790A5C191DAA8FFB004B440E = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -297,6 +318,7 @@
 				790A5C2E1DAA8FFB004B440E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
