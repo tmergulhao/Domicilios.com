@@ -17,7 +17,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupMapView()
+        
         enableCoreLocation()
+        
+        //let mapViewOptions = Bundle.main.loadNibNamed("MapViewOptions", owner: self, options: nil)![0] as! MapViewOptions
+//        mapViewOptions.frame = CGRect(x: 0, y: 0, width: 45, height: 137)
+//        mapViewOptions.tintedBlurView.layer.cornerRadius = 10
+//        mapViewOptions.tintedBlurView.layer.masksToBounds = true
+//        
+//        self.view?.addSubview(mapViewOptions)
         
         // TODO: START LOADER
     }
@@ -30,6 +39,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     // MARK: MKMapViewDelegate
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    func setupMapView() {
+        mapView.showsPointsOfInterest = false
+        mapView.showsBuildings = false
+        mapView.showsTraffic = false
+        mapView.showsUserLocation = true
+    }
     
     // MARK: CLLocationManagerDelegate
     
@@ -49,8 +65,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let coordinate = locations[0].coordinate
         
-        let latDelta : CLLocationDegrees = 0.01
-        let longDelta : CLLocationDegrees = 0.01
+        let latDelta : CLLocationDegrees = 0.00001
+        let longDelta : CLLocationDegrees = 0.00001
         
         let span : MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         let region : MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)

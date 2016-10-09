@@ -14,6 +14,10 @@
 		790A5C281DAA8FFB004B440E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790A5C261DAA8FFB004B440E /* LaunchScreen.storyboard */; };
 		790A5C311DAA902E004B440E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790A5C301DAA902E004B440E /* MapKit.framework */; };
 		790A5C331DAA91D3004B440E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790A5C321DAA91D3004B440E /* CoreLocation.framework */; };
+		79A18B8D1DAABBC50060C78E /* MapViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B8C1DAABBC50060C78E /* MapViewOptions.swift */; };
+		79A18B901DAABE1D0060C78E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A18B8F1DAABE1D0060C78E /* QuartzCore.framework */; };
+		79A18B981DAAD5FD0060C78E /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B971DAAD5FD0060C78E /* StyleKit.m */; };
+		79A18B9A1DAADF4E0060C78E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B991DAADF4E0060C78E /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		790A5C291DAA8FFB004B440E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		790A5C301DAA902E004B440E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		790A5C321DAA91D3004B440E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		79A18B8C1DAABBC50060C78E /* MapViewOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewOptions.swift; sourceTree = "<group>"; };
+		79A18B8F1DAABE1D0060C78E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		79A18B951DAAD5FC0060C78E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		79A18B961DAAD5FD0060C78E /* StyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
+		79A18B971DAAD5FD0060C78E /* StyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKit.m; sourceTree = "<group>"; };
+		79A18B991DAADF4E0060C78E /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A18B901DAABE1D0060C78E /* QuartzCore.framework in Frameworks */,
 				790A5C331DAA91D3004B440E /* CoreLocation.framework in Frameworks */,
 				790A5C311DAA902E004B440E /* MapKit.framework in Frameworks */,
 			);
@@ -63,10 +74,15 @@
 			children = (
 				790A5C1D1DAA8FFB004B440E /* AppDelegate.swift */,
 				790A5C1F1DAA8FFB004B440E /* ViewController.swift */,
+				79A18B991DAADF4E0060C78E /* MapView.swift */,
+				79A18B8C1DAABBC50060C78E /* MapViewOptions.swift */,
+				79A18B961DAAD5FD0060C78E /* StyleKit.h */,
+				79A18B971DAAD5FD0060C78E /* StyleKit.m */,
 				790A5C211DAA8FFB004B440E /* Main.storyboard */,
-				790A5C241DAA8FFB004B440E /* Assets.xcassets */,
 				790A5C261DAA8FFB004B440E /* LaunchScreen.storyboard */,
+				790A5C241DAA8FFB004B440E /* Assets.xcassets */,
 				790A5C291DAA8FFB004B440E /* Info.plist */,
+				79A18B951DAAD5FC0060C78E /* Bridging-Header.h */,
 			);
 			path = Domicilios.com;
 			sourceTree = "<group>";
@@ -74,6 +90,7 @@
 		790A5C2F1DAA902E004B440E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79A18B8F1DAABE1D0060C78E /* QuartzCore.framework */,
 				790A5C321DAA91D3004B440E /* CoreLocation.framework */,
 				790A5C301DAA902E004B440E /* MapKit.framework */,
 			);
@@ -112,6 +129,7 @@
 				TargetAttributes = {
 					790A5C191DAA8FFB004B440E = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -158,7 +176,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				790A5C201DAA8FFB004B440E /* ViewController.swift in Sources */,
+				79A18B8D1DAABBC50060C78E /* MapViewOptions.swift in Sources */,
+				79A18B9A1DAADF4E0060C78E /* MapView.swift in Sources */,
 				790A5C1E1DAA8FFB004B440E /* AppDelegate.swift in Sources */,
+				79A18B981DAAD5FD0060C78E /* StyleKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Domicilios.com/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tmergulhao.Domicilios-com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Domicilios.com/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -291,10 +315,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Domicilios.com/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tmergulhao.Domicilios-com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Domicilios.com/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
