@@ -18,6 +18,11 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         dataSource = DataSource(tableView: self.tableView)
+        tableView.dataSource = dataSource
+        
+        //tableView.backgroundView = nil
+        //tableView.layer.backgroundColor = UIColor.clear.cgColor
+        tableView.backgroundColor = UIColor.clear
     }
     
     override func didReceiveMemoryWarning() {

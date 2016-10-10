@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2C54ED7898EB05ECBBB3BBAFF8C1585DFFAF9005",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2C54ED7898EB05ECBBB3BBAFF8C1585DFFAF9005" : 9223372036854775807,
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0E99DFE4-2CD1-4A6E-AFE3-2BE7012CF060",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2C54ED7898EB05ECBBB3BBAFF8C1585DFFAF9005" : "Domicilios.com\/",
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "Domicilios.com\/AFNetworking\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Domicilios.com",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Domicilios.com.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tmergulhao\/Domicilios.com.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2C54ED7898EB05ECBBB3BBAFF8C1585DFFAF9005"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AFNetworking\/AFNetworking",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8"
+    }
+  ]
+}

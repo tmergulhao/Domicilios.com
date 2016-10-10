@@ -29,7 +29,7 @@ enum FoodPlaceParsingError : Error {
     case logoPath
 }
 
-struct FoodPlace {
+class FoodPlace {
     var name : String
     var category : FoodPlaceCategories
     var price : Double
@@ -39,6 +39,7 @@ struct FoodPlace {
     var time : Int
     var latitude : Double
     var longitude : Double
+    var image : UIImage?
     
     init (dictionary : Dictionary<String, Any>) throws {
         let separator : Character = ","
