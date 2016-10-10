@@ -15,9 +15,51 @@ import AFNetworking
 class DataSource : NSObject {
     let tableView : UITableView
     let cellReuseId : String = "Entry Cell"
+    var data : Array<FoodPlace> = []
     
     init(tableView : UITableView) {
         self.tableView = tableView
+        
+        super.init()
+        
+        fetchData()
+    }
+    
+    func fetchData () {
+        let manager = AFHTTPSessionManager()
+        
+        manager.responseSerializer = AFJSONResponseSerializer()
+        
+        manager.get(
+            "https://api.myjson.com/bins/1zib8",
+            parameters: nil,
+            progress: {
+                progress in
+                return
+            },
+            success: {
+                (task, any : Any?) -> Void in
+                
+                if let array = any as? Array<Any> {
+                    self.data = array
+                        .map({
+                            (data : Any) -> FoodPlace? in
+                            
+                            if  let dictionary = data as? NSDictionary {
+                                return FoodPlace(dictionary: dictionary)
+                            }
+                            
+                            return nil
+                        })
+                        .filter{ $0 != nil }
+                        .map{ $0! }
+                    
+                    print(self.data.count)
+                }
+            }, failure: {
+                data, error in
+                print(error)
+        })
     }
 }
 
