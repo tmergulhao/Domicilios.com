@@ -42,9 +42,7 @@ class DataSource : NSObject {
                 
                 if let array = any as? Array<Dictionary<String,Any>> {
                     self.data = array
-                        .map{ try? FoodPlace(dictionary: $0) }
-                        .filter{ $0 != nil }
-                        .map{ $0! }
+                        .flatMap { try? FoodPlace(dictionary: $0) }
                 }
             }, failure: {
                 data, error in
