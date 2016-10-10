@@ -10,7 +10,21 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+@IBDesignable class MapView: MKMapView {
+    
+    override func draw(_ rect: CGRect) {
+        showsPointsOfInterest = false
+        showsBuildings = false
+        showsTraffic = false
+        showsUserLocation = true
+        
+        #if !TARGET_INTERFACE_BUILDER
+        #else
+        #endif
+    }
+}
+
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     // MARK: UIViewController
 
@@ -65,14 +79,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let coordinate = locations[0].coordinate
         
-        let latDelta : CLLocationDegrees = 0.00001
-        let longDelta : CLLocationDegrees = 0.00001
-        
-        let span : MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        let region : MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)
+        let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: span)
         
         mapView.setRegion(region, animated: true)
-        mapView.setCenter(coordinate, animated: true)
+        // mapView.setCenter(coordinate, animated: true)
         
         locationManager.stopUpdatingLocation()
         
