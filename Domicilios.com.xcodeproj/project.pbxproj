@@ -20,7 +20,8 @@
 		79A18B9D1DAB4A2E0060C78E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B9C1DAB4A2E0060C78E /* TableViewController.swift */; };
 		79A18BA01DAB4B920060C78E /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B9F1DAB4B920060C78E /* DataSource.swift */; };
 		79A18BA21DAB53180060C78E /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18BA11DAB53180060C78E /* EntryCell.swift */; };
-		79A18BA41DAB54900060C78E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18BA31DAB54900060C78E /* Data.swift */; };
+		79A18BA41DAB54900060C78E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18BA31DAB54900060C78E /* DataModel.swift */; };
+		79A18BA81DAB5A140060C78E /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A18BA71DAB5A140060C78E /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,8 @@
 		79A18B9C1DAB4A2E0060C78E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		79A18B9F1DAB4B920060C78E /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		79A18BA11DAB53180060C78E /* EntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
-		79A18BA31DAB54900060C78E /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		79A18BA31DAB54900060C78E /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		79A18BA71DAB5A140060C78E /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../Library/Developer/Xcode/DerivedData/Workspace-guyncdiommxsaybrzovmxasdsiqi/Build/Products/Debug-iphonesimulator/AFNetworking.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A18BA81DAB5A140060C78E /* AFNetworking.framework in Frameworks */,
 				79A18B901DAABE1D0060C78E /* QuartzCore.framework in Frameworks */,
 				790A5C331DAA91D3004B440E /* CoreLocation.framework in Frameworks */,
 				790A5C311DAA902E004B440E /* MapKit.framework in Frameworks */,
@@ -84,7 +87,7 @@
 				790A5C1F1DAA8FFB004B440E /* MapViewController.swift */,
 				79A18B9C1DAB4A2E0060C78E /* TableViewController.swift */,
 				79A18B9F1DAB4B920060C78E /* DataSource.swift */,
-				79A18BA31DAB54900060C78E /* Data.swift */,
+				79A18BA31DAB54900060C78E /* DataModel.swift */,
 				79A18B961DAAD5FD0060C78E /* StyleKit.h */,
 				79A18B971DAAD5FD0060C78E /* StyleKit.m */,
 				790A5C211DAA8FFB004B440E /* Main.storyboard */,
@@ -99,6 +102,7 @@
 		790A5C2F1DAA902E004B440E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79A18BA71DAB5A140060C78E /* AFNetworking.framework */,
 				79A18B8F1DAABE1D0060C78E /* QuartzCore.framework */,
 				790A5C321DAA91D3004B440E /* CoreLocation.framework */,
 				790A5C301DAA902E004B440E /* MapKit.framework */,
@@ -191,7 +195,7 @@
 				79A18BA21DAB53180060C78E /* EntryCell.swift in Sources */,
 				79A18B9D1DAB4A2E0060C78E /* TableViewController.swift in Sources */,
 				79A18B981DAAD5FD0060C78E /* StyleKit.m in Sources */,
-				79A18BA41DAB54900060C78E /* Data.swift in Sources */,
+				79A18BA41DAB54900060C78E /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

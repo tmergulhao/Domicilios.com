@@ -8,6 +8,8 @@
 
 import UIKit
 
+import AFNetworking
+
 // MARK: NSObject
 
 class DataSource : NSObject {
