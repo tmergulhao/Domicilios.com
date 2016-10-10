@@ -1,0 +1,91 @@
+[{
+    "categorias": "Hamburguesas y Perros Calientes",
+    "domicilio": "4300.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "Presto",
+    "rating": "3",
+    "tiempo_domicilio": "45",
+    "ubicacion_txt": ""
+}, {
+    "categorias": "Pollo",
+    "domicilio": "3300.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "Pollo Y Sabor",
+    "rating": "5",
+    "tiempo_domicilio": "15",
+    "ubicacion_txt": "4.666127599999999,-74.05630480000002"
+}, {
+    "categorias": "Pizza",
+    "domicilio": "1500.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "Jennos",
+    "rating": "1",
+    "tiempo_domicilio": "55",
+    "ubicacion_txt": "4.6853342,-74.05629249999998"
+}, {
+    "categorias": "Desayunos",
+    "domicilio": "5450.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "La Perla",
+    "rating": "4",
+    "tiempo_domicilio": "25",
+    "ubicacion_txt": "4.680190899999999,-74.05018619999998"
+}, {
+    "categorias": "Sanduches",
+    "domicilio": "0.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "Qbano",
+    "rating": "3",
+    "tiempo_domicilio": "45",
+    "ubicacion_txt": "4.670808,-74.05628480000001"
+}, {
+    "categorias": "Arepas",
+    "domicilio": "0.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "Arepitas",
+    "rating": "3",
+    "tiempo_domicilio": "65",
+    "ubicacion_txt": "4.6481251,-74.06373300000001"
+}, {
+    "categorias": "Hamburguesas y Perros Calientes",
+    "domicilio": "300.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "KFC",
+    "rating": "5",
+    "tiempo_domicilio": "40",
+    "ubicacion_txt": "4.6809193,-74.04983279999999"
+}, {
+    "categorias": "Comida Mexicana",
+    "domicilio": "5300.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "Mexico",
+    "rating": "1",
+    "tiempo_domicilio": "65",
+    "ubicacion_txt": "4.688215396289573,-74.07204663495486"
+}, {
+    "categorias": "Pizza",
+    "domicilio": "0.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "Domino's",
+    "rating": "4",
+    "tiempo_domicilio": "35",
+    "ubicacion_txt": "4.6493662634151445,-74.0630139277755"
+}, {
+    "categorias": "Hamburguesas y Perros Calientes",
+    "domicilio": "200.00",
+    "url_detalle": "",
+    "logo_path": "http://clic-1032-api-promos-first-time.web.development.2delivery.co/timthumb?src=http%3A%2F%2Fclic-1032-api-promos-first-time.web.development.2delivery.co%2Fimg%2Fresources%2F12105.jpg\u0026q=70\u0026a=c\u0026zc=2\u0026ct=1\u0026w=120\u0026h=120",
+    "nombre": "Presto",
+    "rating": "1",
+    "tiempo_domicilio": "15",
+    "ubicacion_txt": "4.6623987,-74.05869819999998"
+}]
