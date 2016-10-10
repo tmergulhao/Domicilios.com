@@ -6,6 +6,8 @@ Use the `Domicilios.com.workspace` file to open the project. Opening the AFNetwo
 
 [Design wireframe on Figma](https://www.figma.com/file/L0GcMnPspSFjtlPjPRQrMjtJ/Wireframes)
 
+![Design wireframe on Figma](Wireframes.png)
+
 ## Objective-C library
 
 The StyleKit was composed with [PaintCode](https://www.paintcodeapp.com) and bound into the project using [Xcode Bridging-Header.h model](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html).
