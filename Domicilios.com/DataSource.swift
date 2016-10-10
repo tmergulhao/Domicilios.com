@@ -40,21 +40,11 @@ class DataSource : NSObject {
             success: {
                 (task, any : Any?) -> Void in
                 
-                if let array = any as? Array<Any> {
+                if let array = any as? Array<Dictionary<String,Any>> {
                     self.data = array
-                        .map({
-                            (data : Any) -> FoodPlace? in
-                            
-                            if  let dictionary = data as? NSDictionary {
-                                return FoodPlace(dictionary: dictionary)
-                            }
-                            
-                            return nil
-                        })
+                        .map{ try? FoodPlace(dictionary: $0) }
                         .filter{ $0 != nil }
                         .map{ $0! }
-                    
-                    print(self.data.count)
                 }
             }, failure: {
                 data, error in
