@@ -19,7 +19,6 @@
 		79A18B8D1DAABBC50060C78E /* MapViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B8C1DAABBC50060C78E /* MapViewOptions.swift */; };
 		79A18B901DAABE1D0060C78E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A18B8F1DAABE1D0060C78E /* QuartzCore.framework */; };
 		79A18B981DAAD5FD0060C78E /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B971DAAD5FD0060C78E /* StyleKit.m */; };
-		79A18B9D1DAB4A2E0060C78E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B9C1DAB4A2E0060C78E /* TableViewController.swift */; };
 		79A18BA01DAB4B920060C78E /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B9F1DAB4B920060C78E /* DataSource.swift */; };
 		79A18BA21DAB53180060C78E /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18BA11DAB53180060C78E /* EntryCell.swift */; };
 		79A18BA41DAB54900060C78E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18BA31DAB54900060C78E /* DataModel.swift */; };
@@ -43,7 +42,6 @@
 		79A18B951DAAD5FC0060C78E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		79A18B961DAAD5FD0060C78E /* StyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
 		79A18B971DAAD5FD0060C78E /* StyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKit.m; sourceTree = "<group>"; };
-		79A18B9C1DAB4A2E0060C78E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		79A18B9F1DAB4B920060C78E /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		79A18BA11DAB53180060C78E /* EntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		79A18BA31DAB54900060C78E /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				795588981DAD5BA100D9BC29 /* MapViewAnnotation.swift */,
 				7955889B1DAD61BF00D9BC29 /* MapView.swift */,
 				790A5C1F1DAA8FFB004B440E /* MapViewController.swift */,
-				79A18B9C1DAB4A2E0060C78E /* TableViewController.swift */,
 				79A18B9F1DAB4B920060C78E /* DataSource.swift */,
 				79A18BA31DAB54900060C78E /* DataModel.swift */,
 				790A5C211DAA8FFB004B440E /* Main.storyboard */,
@@ -199,7 +196,6 @@
 				79A18B8D1DAABBC50060C78E /* MapViewOptions.swift in Sources */,
 				790A5C1E1DAA8FFB004B440E /* AppDelegate.swift in Sources */,
 				79A18BA21DAB53180060C78E /* EntryCell.swift in Sources */,
-				79A18B9D1DAB4A2E0060C78E /* TableViewController.swift in Sources */,
 				79A18B981DAAD5FD0060C78E /* StyleKit.m in Sources */,
 				7955889C1DAD61BF00D9BC29 /* MapView.swift in Sources */,
 				795588991DAD5BA100D9BC29 /* MapViewAnnotation.swift in Sources */,
