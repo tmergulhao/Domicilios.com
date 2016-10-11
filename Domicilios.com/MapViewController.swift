@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController {
     
     // MARK: UIViewController
 
@@ -21,16 +21,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             customMapView.dataSource = DataSource()
         }
         
-        setupMapView()
-        
         enableCoreLocation()
-        
-        //let mapViewOptions = Bundle.main.loadNibNamed("MapViewOptions", owner: self, options: nil)![0] as! MapViewOptions
-//        mapViewOptions.frame = CGRect(x: 0, y: 0, width: 45, height: 137)
-//        mapViewOptions.tintedBlurView.layer.cornerRadius = 10
-//        mapViewOptions.tintedBlurView.layer.masksToBounds = true
-//        
-//        self.view?.addSubview(mapViewOptions)
         
         // TODO: START LOADER
     }
@@ -39,19 +30,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: MKMapViewDelegate
     
     @IBOutlet weak var mapView: MKMapView!
-    
-    func setupMapView() {
-        mapView.showsPointsOfInterest = false
-        mapView.showsBuildings = false
-        mapView.showsTraffic = false
-        mapView.showsUserLocation = true
-    }
-    
-    // MARK: CLLocationManagerDelegate
     
     let locationManager = CLLocationManager()
     
@@ -65,6 +45,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         // if CLLocationManager.locationServicesEnabled() {}
     }
+    
+}
+
+// MARK: CLLocationManagerDelegate
+
+extension MapViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // let coordinate = locations[0].coordinate
@@ -105,5 +91,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             print(status)
         }
     }
-    
 }
+
+// MARK: MKMapViewDelegate
+
+extension MapViewController : MKMapViewDelegate {}
