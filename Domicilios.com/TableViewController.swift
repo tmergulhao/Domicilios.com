@@ -12,13 +12,8 @@ import Foundation
 
 class TableViewController: UITableViewController {
     
-    var dataSource : DataSource!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dataSource = DataSource(tableView: self.tableView)
-        tableView.dataSource = dataSource
         
         //tableView.backgroundView = nil
         //tableView.layer.backgroundColor = UIColor.clear.cgColor

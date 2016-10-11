@@ -10,26 +10,16 @@ import UIKit
 import MapKit
 import CoreLocation
 
-@IBDesignable class MapView: MKMapView {
-    
-    override func draw(_ rect: CGRect) {
-        showsPointsOfInterest = false
-        showsBuildings = false
-        showsTraffic = false
-        showsUserLocation = true
-        
-        #if !TARGET_INTERFACE_BUILDER
-        #else
-        #endif
-    }
-}
-
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     // MARK: UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let customMapView = self.mapView as? MapView {
+            customMapView.dataSource = DataSource()
+        }
         
         setupMapView()
         
@@ -77,13 +67,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let coordinate = locations[0].coordinate
-        
-        let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: span)
-        
-        mapView.setRegion(region, animated: true)
-        // mapView.setCenter(coordinate, animated: true)
+        // let coordinate = locations[0].coordinate
         
         locationManager.stopUpdatingLocation()
         
@@ -123,4 +107,3 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
 }
-

@@ -14,6 +14,8 @@
 		790A5C281DAA8FFB004B440E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790A5C261DAA8FFB004B440E /* LaunchScreen.storyboard */; };
 		790A5C311DAA902E004B440E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790A5C301DAA902E004B440E /* MapKit.framework */; };
 		790A5C331DAA91D3004B440E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790A5C321DAA91D3004B440E /* CoreLocation.framework */; };
+		795588991DAD5BA100D9BC29 /* MapViewAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795588981DAD5BA100D9BC29 /* MapViewAnnotation.swift */; };
+		7955889C1DAD61BF00D9BC29 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7955889B1DAD61BF00D9BC29 /* MapView.swift */; };
 		79A18B8D1DAABBC50060C78E /* MapViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B8C1DAABBC50060C78E /* MapViewOptions.swift */; };
 		79A18B901DAABE1D0060C78E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A18B8F1DAABE1D0060C78E /* QuartzCore.framework */; };
 		79A18B981DAAD5FD0060C78E /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A18B971DAAD5FD0060C78E /* StyleKit.m */; };
@@ -34,6 +36,8 @@
 		790A5C291DAA8FFB004B440E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		790A5C301DAA902E004B440E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		790A5C321DAA91D3004B440E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		795588981DAD5BA100D9BC29 /* MapViewAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewAnnotation.swift; sourceTree = "<group>"; };
+		7955889B1DAD61BF00D9BC29 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		79A18B8C1DAABBC50060C78E /* MapViewOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewOptions.swift; sourceTree = "<group>"; };
 		79A18B8F1DAABE1D0060C78E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		79A18B951DAAD5FC0060C78E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -84,17 +88,19 @@
 				790A5C1D1DAA8FFB004B440E /* AppDelegate.swift */,
 				79A18B8C1DAABBC50060C78E /* MapViewOptions.swift */,
 				79A18BA11DAB53180060C78E /* EntryCell.swift */,
+				795588981DAD5BA100D9BC29 /* MapViewAnnotation.swift */,
+				7955889B1DAD61BF00D9BC29 /* MapView.swift */,
 				790A5C1F1DAA8FFB004B440E /* MapViewController.swift */,
 				79A18B9C1DAB4A2E0060C78E /* TableViewController.swift */,
 				79A18B9F1DAB4B920060C78E /* DataSource.swift */,
 				79A18BA31DAB54900060C78E /* DataModel.swift */,
-				79A18B961DAAD5FD0060C78E /* StyleKit.h */,
-				79A18B971DAAD5FD0060C78E /* StyleKit.m */,
 				790A5C211DAA8FFB004B440E /* Main.storyboard */,
 				790A5C261DAA8FFB004B440E /* LaunchScreen.storyboard */,
 				790A5C241DAA8FFB004B440E /* Assets.xcassets */,
 				790A5C291DAA8FFB004B440E /* Info.plist */,
 				79A18B951DAAD5FC0060C78E /* Bridging-Header.h */,
+				79A18B961DAAD5FD0060C78E /* StyleKit.h */,
+				79A18B971DAAD5FD0060C78E /* StyleKit.m */,
 			);
 			path = Domicilios.com;
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 				79A18BA21DAB53180060C78E /* EntryCell.swift in Sources */,
 				79A18B9D1DAB4A2E0060C78E /* TableViewController.swift in Sources */,
 				79A18B981DAAD5FD0060C78E /* StyleKit.m in Sources */,
+				7955889C1DAD61BF00D9BC29 /* MapView.swift in Sources */,
+				795588991DAD5BA100D9BC29 /* MapViewAnnotation.swift in Sources */,
 				79A18BA41DAB54900060C78E /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 import AFNetworking
 
@@ -14,20 +15,24 @@ import AFNetworking
 
 class DataSource : NSObject {
     
-    let tableView : UITableView
-    let cellReuseId : String = "Entry Cell"
-    var data : Array<FoodPlace> = []
+    static var data : Array<FoodPlace> = []
     
-    init(tableView : UITableView) {
-        self.tableView = tableView
-        
+    let cellReuseId : String = "Entry Cell"
+    
+    @IBOutlet var tableView : UITableView?
+    @IBOutlet var mapView : MapView? // MKMapView
+    
+    override init () {
         super.init()
         
         fetchData()
-        fetchImages()
     }
     
     func fetchData () {
+        if !DataSource.data.isEmpty {
+            return
+        }
+        
         let manager = AFHTTPSessionManager()
         
         manager.responseSerializer = AFJSONResponseSerializer()
@@ -43,15 +48,19 @@ class DataSource : NSObject {
                 (task, any : Any?) -> Void in
                 
                 if let array = any as? Array<Dictionary<String,Any>> {
-                    self.data = array
+                    DataSource.data = array
                         .flatMap { try? FoodPlace(dictionary: $0) }
                 }
                 
-                self.tableView.reloadData()
-            }, failure: {
+                self.fetchImages()
+                
+                self.tableView?.reloadData()
+                self.mapView?.reloadData()
+            },
+            failure: {
                 data, error in
                 print(error)
-        })
+            })
     }
     
     func fetchImages () {
@@ -59,22 +68,22 @@ class DataSource : NSObject {
         
         imageManager.responseSerializer = AFImageResponseSerializer()
         
-        self.data = self.data.map({
-            record -> FoodPlace in
-            
+        for record in DataSource.data {
             imageManager.get(
                 record.logoPath,
                 parameters: nil,
                 progress: {
                     progress in
                     return
-                }, success: {
+                },
+                success: {
                     session, object in
                     
                     if let image = object as? UIImage {
                         record.image = image
                         print("SUCCESS FOR \(record.name)")
-                        self.tableView.reloadData()
+                        self.tableView?.reloadData()
+                        self.mapView?.reloadData()
                     } else {
                         print("FAILED TO LOAD \(record.logoPath) FOR \(record.name)")
                     }
@@ -83,9 +92,64 @@ class DataSource : NSObject {
                     task, error in
                     return
                 })
-            
-            return record
-        })
+        }
+    }
+}
+
+protocol MKMapViewDataSource : NSObjectProtocol {
+    func numberOfSections(in mapView: MKMapView) -> Int
+    func mapView(_ mapView: MKMapView, numberOfAnnotationsInSection section: Int) -> Int
+    func mapView(_ mapView: MKMapView, annotationForRowAt indexPath: IndexPath) -> MKAnnotation
+    func mapView(_ mapView: MKMapView, regionForSection section: Int) -> MKCoordinateRegion
+}
+
+// MARK: MKMapViewDataSource
+
+extension DataSource : MKMapViewDataSource {
+    func numberOfSections(in mapView: MKMapView) -> Int {
+        return 1
+    }
+    
+    func mapView(_ mapView: MKMapView, numberOfAnnotationsInSection section: Int) -> Int {
+        return DataSource.data.count
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationForRowAt indexPath: IndexPath) -> MKAnnotation {
+        let record = DataSource.data[indexPath.row]
+        let coordinate = CLLocationCoordinate2D(latitude: record.latitude, longitude: record.longitude)
+        
+        return MapViewAnnotation(name: record.name, category: record.category, coordinate: coordinate, logo: record.image)
+    }
+    
+    func mapView(_ mapView: MKMapView, regionForSection section: Int) -> MKCoordinateRegion {
+        let latitude = (
+            max: DataSource.data.reduce(-180, {
+                oldValue, record in
+                return oldValue < record.latitude ? record.latitude : oldValue
+            }),
+            min: DataSource.data.reduce(+180, {
+                oldValue, record in
+                return oldValue > record.latitude ? record.latitude : oldValue
+            })
+        )
+        let longitude = (
+            max: DataSource.data.reduce(-180, {
+                oldValue, record in
+                return oldValue < record.longitude ? record.longitude : oldValue
+            }),
+            min: DataSource.data.reduce(+180, {
+                oldValue, record in
+                return oldValue > record.longitude ? record.longitude : oldValue
+            })
+        )
+        
+        let latitudeDelta = (latitude.max - latitude.min)/2
+        let longitudeDelta = (longitude.max - longitude.min)/2
+        
+        let coordinate = CLLocationCoordinate2D(latitude: latitude.min + latitudeDelta, longitude: longitude.min + longitudeDelta)
+        let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latitudeDelta * 3, longitudeDelta: longitudeDelta * 3)
+        
+        return MKCoordinateRegion(center: coordinate, span: span)
     }
 }
 
@@ -96,16 +160,18 @@ extension DataSource : UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return DataSource.data.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let record = DataSource.data[indexPath.row]
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId, for: indexPath) as? EntryCell {
-            cell.title.text = data[indexPath.row].name
-            cell.category.text = data[indexPath.row].category.rawValue
+            cell.title.text = record.name
+            cell.category.text = record.category.rawValue
             
             cell.backgroundColor = UIColor.clear
             
-            print(data[indexPath.row].image)
+            print(record.image)
             
             return cell
         }
