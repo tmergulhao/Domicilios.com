@@ -69,6 +69,7 @@ class DataSource : NSObject {
         imageManager.responseSerializer = AFImageResponseSerializer()
         
         for record in DataSource.data {
+            
             imageManager.get(
                 record.logoPath,
                 parameters: nil,
@@ -90,6 +91,7 @@ class DataSource : NSObject {
                 },
                 failure: {
                     task, error in
+                    
                     return
                 })
         }
@@ -116,9 +118,8 @@ extension DataSource : MKMapViewDataSource {
     
     func mapView(_ mapView: MKMapView, annotationForRowAt indexPath: IndexPath) -> MKAnnotation {
         let record = DataSource.data[indexPath.row]
-        let coordinate = CLLocationCoordinate2D(latitude: record.latitude, longitude: record.longitude)
         
-        return MapViewAnnotation(name: record.name, category: record.category, coordinate: coordinate, logo: record.image)
+        return MapViewAnnotation(record: record)
     }
     
     func mapView(_ mapView: MKMapView, regionForSection section: Int) -> MKCoordinateRegion {
@@ -169,9 +170,13 @@ extension DataSource : UITableViewDataSource {
             cell.title.text = record.name
             cell.category.text = record.category.rawValue
             
-            cell.backgroundColor = UIColor.clear
+            if let image = record.image {
+                cell.logo.image = image
+            } else {
+                cell.logo.image = StyleKit.imageOfDeliveries()
+            }
             
-            print(record.image)
+            cell.backgroundColor = UIColor.clear
             
             return cell
         }

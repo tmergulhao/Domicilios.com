@@ -9,31 +9,24 @@
 import MapKit
 
 class MapViewAnnotation : NSObject, MKAnnotation {
-    let name : String
-    let category : FoodPlaceCategories
-    let logo : UIImage
+    let record : FoodPlace
     
     // MARK : MKAnnotation
-    
-    let coordinate: CLLocationCoordinate2D
-    
+
+    var coordinate : CLLocationCoordinate2D
     var title : String? {
-        return name
+        return record.name
     }
     var subtitle : String? {
-        return category.rawValue
+        return record.category.rawValue
+    }
+    var image : UIImage? {
+        return record.image
     }
     
-    init (name : String, category : FoodPlaceCategories, coordinate : CLLocationCoordinate2D, logo : UIImage?) {
-        self.name = name
-        self.category = category
-        self.coordinate = coordinate
-        
-        if let image = logo {
-            self.logo = image
-        } else {
-            self.logo = StyleKit.imageOfDeliveries()
-        }
+    init (record : FoodPlace) {
+        self.record = record
+        self.coordinate = CLLocationCoordinate2D(latitude: record.latitude, longitude: record.longitude)
         
         super.init()
     }

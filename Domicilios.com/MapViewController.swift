@@ -95,4 +95,60 @@ extension MapViewController : CLLocationManagerDelegate {
 
 // MARK: MKMapViewDelegate
 
-extension MapViewController : MKMapViewDelegate {}
+extension MapViewController : MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if (annotation is MKUserLocation) { return nil }
+        
+        if  let reuseID = annotation.title,
+            let view = mapView.dequeueReusableAnnotationView(withIdentifier: reuseID!) {
+            view.annotation = annotation
+            
+            return view
+        }
+        
+        if  let customAnnotation = annotation as? MapViewAnnotation,
+            let logo = customAnnotation.image,
+            let imageComposition = generateImageFromLogo(logo),
+            let reuseID = annotation.title {
+            
+            let view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+            
+            view.image = imageComposition
+            
+            return view
+        }
+        
+        if let view = mapView.dequeueReusableAnnotationView(withIdentifier: "default") {
+            view.annotation = annotation
+            
+            return view
+        }
+        
+        let view = MKAnnotationView(annotation: annotation, reuseIdentifier: "default")
+        view.image = StyleKit.imageOfMapPlaceholder()
+        
+        return view
+    }
+    
+    func generateImageFromLogo(_ logo : UIImage) -> UIImage? {
+        let bottomImageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let topImageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        
+        bottomImageView.image = StyleKit.imageOfMapPlaceholder()
+        topImageView.image = logo
+        
+        bottomImageView.contentMode = .scaleAspectFit
+        topImageView.contentMode = .scaleAspectFill
+        
+        // TODO : Clip to circle mask of 16 radius
+        
+        UIGraphicsBeginImageContext(bottomImageView.frame.size)
+        
+        bottomImageView.image?.draw(in: CGRect(x: 0, y: 0, width: bottomImageView.frame.size.width, height: bottomImageView.frame.size.height), blendMode: .normal, alpha: 1.0)
+        topImageView.image?.draw(in: CGRect(x:0, y: 0, width: topImageView.frame.size.width, height: topImageView.frame.size.height), blendMode: .normal, alpha: 1.0)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        return newImage
+    }
+}
