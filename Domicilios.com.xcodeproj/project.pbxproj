@@ -23,6 +23,7 @@
 		79A18BA21DAB53180060C78E /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18BA11DAB53180060C78E /* EntryCell.swift */; };
 		79A18BA41DAB54900060C78E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A18BA31DAB54900060C78E /* DataModel.swift */; };
 		79A18BA81DAB5A140060C78E /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A18BA71DAB5A140060C78E /* AFNetworking.framework */; };
+		79FCCFA21DAEABDF00D05FB2 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FCCFA11DAEABDF00D05FB2 /* FilterButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		79A18BA11DAB53180060C78E /* EntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		79A18BA31DAB54900060C78E /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		79A18BA71DAB5A140060C78E /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../Library/Developer/Xcode/DerivedData/Workspace-guyncdiommxsaybrzovmxasdsiqi/Build/Products/Debug-iphonesimulator/AFNetworking.framework"; sourceTree = "<group>"; };
+		79FCCFA11DAEABDF00D05FB2 /* FilterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				790A5C1D1DAA8FFB004B440E /* AppDelegate.swift */,
+				79FCCFA11DAEABDF00D05FB2 /* FilterButton.swift */,
 				79A18BA11DAB53180060C78E /* EntryCell.swift */,
 				795588981DAD5BA100D9BC29 /* MapViewAnnotation.swift */,
 				79A18B8C1DAABBC50060C78E /* MapViewOptions.swift */,
@@ -198,6 +201,7 @@
 				79A18BA21DAB53180060C78E /* EntryCell.swift in Sources */,
 				79A18B981DAAD5FD0060C78E /* StyleKit.m in Sources */,
 				7955889C1DAD61BF00D9BC29 /* MapView.swift in Sources */,
+				79FCCFA21DAEABDF00D05FB2 /* FilterButton.swift in Sources */,
 				795588991DAD5BA100D9BC29 /* MapViewAnnotation.swift in Sources */,
 				79A18BA41DAB54900060C78E /* DataModel.swift in Sources */,
 			);

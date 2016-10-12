@@ -34,17 +34,3 @@ import QuartzCore
         self.setImage(StyleKit.imageOfListView(), for: .normal)
     }
 }
-
-//@IBDesignable class TintedBlurView: UIVisualEffectView {
-//    
-//    @IBInspectable var cornerRadius: CGFloat = 0
-//    
-//    override func draw(_ rect: CGRect) {
-//        
-//        layer.cornerRadius = CGFloat(10)
-//        //layer.cornerRadius = 10//cornerRadius
-//        
-//        //self.layer.cornerRadius = cornerRadius
-//    }
-//    
-//}
