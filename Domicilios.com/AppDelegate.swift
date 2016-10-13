@@ -15,16 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        // return true
+         // Override point for customization after application launch.
+         return true
         
-        let bounds = UIScreen.main.bounds
-        window = UIWindow.init(frame: bounds)
-        
-        let main = MapViewController()
-        window?.rootViewController = main
-        window?.makeKeyAndVisible()
-        return true
+//        let bounds = UIScreen.main.bounds
+//        window = UIWindow.init(frame: bounds)
+//        
+//        let main = MapViewController()
+//        window?.rootViewController = main
+//        window?.makeKeyAndVisible()
+//        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

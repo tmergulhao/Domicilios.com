@@ -10,11 +10,19 @@ import UIKit
 import QuartzCore
 
 @IBDesignable class RedGlassView: UIVisualEffectView {
-    override func draw(_ rect: CGRect) {
-        layer.backgroundColor = StyleKit.red().cgColor
+#if !TARGET_INTERFACE_BUILDER
+    override func awakeFromNib () {
+        super.awakeFromNib()
+        
         layer.masksToBounds = true
         layer.cornerRadius = 10
     }
+#else
+    override func draw(_ rect: CGRect) {
+        layer.masksToBounds = true
+        layer.cornerRadius = 10
+    }
+#endif
 }
 
 @IBDesignable class DeliveriesButton : UIButton {

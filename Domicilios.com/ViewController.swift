@@ -12,8 +12,6 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var scrollView : UIScrollView!
-    
     // MARK: UIViewController
 
     override func viewDidLoad() {
@@ -22,8 +20,6 @@ class ViewController: UIViewController {
         if let customMapView = self.mapView as? MapView {
             customMapView.dataSource = DataSource()
         }
-        
-        scrollView.contentInset.top = 1000
         
         enableCoreLocation()
         

@@ -34,16 +34,7 @@ import UIKit
 //    }
 //    
 //    func prepareBackgroundView () {
-//        let blurEffect = UIBlurEffect(style: .light)
-//        let visualEffect = UIVisualEffectView(effect: blurEffect)
-//        let bluredView = UIVisualEffectView(effect: blurEffect)
-//        
-//        bluredView.contentView.addSubview(visualEffect)
-//        
-//        visualEffect.frame = UIScreen.main.bounds
-//        bluredView.frame = UIScreen.main.bounds
-//        
-//        view.insertSubview(bluredView, at: 0)
+
 //    }
 //    
 //    func panGesture(recognizer: UIPanGestureRecognizer) {
@@ -54,13 +45,9 @@ import UIKit
 //    }
 //}
 
-//class BottomSheetViewController: UIViewController {
 class SheetViewController : UIViewController {
-    // holdView can be UIImageView instead
-    @IBOutlet weak var holdView: UIView!
     @IBOutlet weak var left: UIButton!
     @IBOutlet weak var right: UIButton!
-    @IBOutlet weak var close: UIButton!
     
     let fullView: CGFloat = 100
     var partialView: CGFloat {
@@ -69,17 +56,15 @@ class SheetViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(SheetViewController.panGesture))
-        view.addGestureRecognizer(gesture)
-        roundViews()
+        
+        left.layer.cornerRadius = 10
+        right.layer.cornerRadius = 10
+        left.layer.borderColor = UIColor(colorLiteralRed: 0, green: 148/255, blue: 247.0/255.0, alpha: 1).cgColor
+        left.layer.borderWidth = 1
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        close.setImage(StyleKit.imageOfCloseImageDialog(), for: UIControlState.normal)
-        
-        prepareBackgroundView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -92,13 +77,12 @@ class SheetViewController : UIViewController {
         })
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func leftButton(_ sender: AnyObject) {
+        print("Left Button")
     }
     
     @IBAction func rightButton(_ sender: AnyObject) {
-        print("tabbed")
+        print("Right Button")
     }
     
     @IBAction func close(_ sender: AnyObject) {
@@ -108,7 +92,7 @@ class SheetViewController : UIViewController {
         })
     }
     
-    func panGesture(_ recognizer: UIPanGestureRecognizer) {
+    @IBAction func panGesture(_ recognizer: UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self.view)
         let velocity = recognizer.velocity(in: self.view)
         let y = self.view.frame.minY
@@ -131,28 +115,5 @@ class SheetViewController : UIViewController {
             })
         }
     }
-    
-    func roundViews() {
-        view.layer.cornerRadius = 10
-        holdView.layer.cornerRadius = 3
-        left.layer.cornerRadius = 10
-        right.layer.cornerRadius = 10
-        left.layer.borderColor = UIColor(colorLiteralRed: 0, green: 148/255, blue: 247.0/255.0, alpha: 1).cgColor
-        left.layer.borderWidth = 1
-        view.clipsToBounds = true
-    }
-    
-    func prepareBackgroundView(){
-        let blurEffect = UIBlurEffect.init(style: .light)
-        let visualEffect = UIVisualEffectView.init(effect: blurEffect)
-        let bluredView = UIVisualEffectView.init(effect: blurEffect)
-        bluredView.contentView.addSubview(visualEffect)
-        
-        visualEffect.frame = UIScreen.main.bounds
-        bluredView.frame = UIScreen.main.bounds
-        
-        view.insertSubview(bluredView, at: 0)
-    }
-    
 }
 
