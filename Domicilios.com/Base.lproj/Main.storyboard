@@ -29,15 +29,15 @@
                                     <frame key="frameInset"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIL-c7-Ebl" customClass="ListViewButton" customModule="Domicilios_com" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIL-c7-Ebl" customClass="ListViewButton" customModule="Domicilios_com" customModuleProvider="target">
                                             <frame key="frameInset" minY="92" width="45" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzq-mX-nS0" customClass="LocationButton" customModule="Domicilios_com" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzq-mX-nS0" customClass="LocationButton" customModule="Domicilios_com" customModuleProvider="target">
                                             <frame key="frameInset" minY="46" width="45" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDi-L0-UvJ" customClass="DeliveriesButton" customModule="Domicilios_com" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDi-L0-UvJ" customClass="DeliveriesButton" customModule="Domicilios_com" customModuleProvider="target">
                                             <frame key="frameInset" width="45" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </button>
@@ -235,6 +235,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="gIZ-VZ-b9v" customClass="SheetViewController" customModule="Domicilios_com" customModuleProvider="target">
                     <connections>
+                        <outlet property="filterView" destination="VKM-Qh-Frx" id="clm-tL-Ons"/>
                         <outlet property="left" destination="nxf-Kj-frq" id="KF5-zY-Ew2"/>
                         <outlet property="right" destination="vOC-Rb-rmb" id="lby-Yt-Cto"/>
                         <outlet property="view" destination="nur-Ba-ard" id="bpg-ce-cdg"/>

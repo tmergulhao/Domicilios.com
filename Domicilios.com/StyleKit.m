@@ -703,7 +703,7 @@ static UIImage* _imageOfCloseImageDialog = nil;
 + (void)drawCloseImageDialog
 {
     //// Color Declarations
-    UIColor* grayOverlay = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 0.158];
+    UIColor* grayOverlay = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 0.6];
 
     //// Bezier Drawing
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
